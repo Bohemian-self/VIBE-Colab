@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# Max-Planck-Gesellschaft zur Förderung der Wissenschaften e.V. (MPG) is
-# holder of all proprietary rights on this computer program.
-# You can only use this computer program if you have closed
-# a license agreement with MPG or you get the right to use the computer
-# program from someone who is authorized to grant you that right.
-# Any use of the computer program without a valid license is prohibited and
+# ————————————————————————————————修改过的Config文件—————————————————————————————
 # liable to prosecution.
 #
 # Copyright©2019 Max-Planck-Gesellschaft zur Förderung
@@ -26,7 +19,7 @@ MPII3D_DIR = 'data/mpi_inf_3dhp'
 THREEDPW_DIR = 'data/3dpw'
 PENNACTION_DIR = 'data/penn_action'
 POSETRACK_DIR = 'data/posetrack'
-VIBE_DATA_DIR = 'data/vibe_data'
+VIBE_DATA_DIR = '/content/VIBE/data/vibe_data' #replace with your Google Colab Runtime's vibe_data absoult path
 
 # Configuration variables
 cfg = CN()
