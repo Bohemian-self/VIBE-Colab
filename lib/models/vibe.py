@@ -22,7 +22,7 @@ import torch.nn.functional as F
 
 from lib.core.config import VIBE_DATA_DIR
 from lib.models.spin import Regressor, hmr
-
+map_location = None if torch.cuda.is_available() else torch.device('cpu')
 
 class TemporalEncoder(nn.Module):
     def __init__(
@@ -93,7 +93,7 @@ class VIBE(nn.Module):
         self.regressor = Regressor()
 
         if pretrained and os.path.isfile(pretrained):
-            pretrained_dict = torch.load(pretrained)['model']
+            pretrained_dict = torch.load(pretrained, map_location=map_location)['model']
 
             self.regressor.load_state_dict(pretrained_dict, strict=False)
             print(f'=> loaded pretrained model from \'{pretrained}\'')
